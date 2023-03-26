@@ -8,18 +8,26 @@ import javax.persistence.Id;
 
 @Entity
 public class Item {
-	
+
 	// Need To Discuss How to Save Image Of Product (Bishnu Daught )
 
 	@Id
 	@GeneratedValue
-	private Integer itemId; 
+	private Integer itemId;
 	private Integer price;
 	private String itemName;
+
+	public String getDescription() {
+		return Description;
+	}
+
+	public void setDescription(String description) {
+		Description = description;
+	}
+
 	private String Description;
 	private Date createdTime;
 	private Date updationTime;
-	
 
 	public Integer getPrice() {
 		return price;
